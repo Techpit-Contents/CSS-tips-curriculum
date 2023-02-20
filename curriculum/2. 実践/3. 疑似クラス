@@ -1,0 +1,51 @@
+# 疑似クラス
+
+CSSにはホバー中などユーザーの操作状態を示すセレクタがある。
+これを擬似クラスといい、これをうまく使うことでJavaScriptなしでもメニューを組むといったことができる。
+
+下記は、リンクのデフォルト設定を上書きする例である
+
+```.css
+a:link, a:visited, a:hover, a:active {
+    color: # ff0000;
+}
+```
+
+:hober はネストして利用できる。
+
+```
+<template>
+    <div class="parent">
+        メニュー
+        <div>サブメニュー</div>
+    </div>
+    <div class="parent">
+        メニュー
+        <div>サブメニュー</div>
+    </div>
+    <div class="parent">
+        メニュー
+        <div>サブメニュー</div>
+    </div>
+
+</template>
+
+
+<style>
+.parent div {
+
+    display: none;
+}
+
+.parent:hover div {
+    display: initial;
+}
+</style>
+
+```
+
+これで、マウスを重ねることでサブメニューが表示されるはずだ。
+// TODO 実際に確認できるか試してなんかいいCodepen的なリンクを貼る
+
+
+

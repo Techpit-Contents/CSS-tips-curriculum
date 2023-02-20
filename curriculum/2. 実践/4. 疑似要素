@@ -1,0 +1,27 @@
+# 疑似要素
+
+疑似要素は、選択された要素の特定の部分にスタイル付けできるようにするものである。
+疑似要素は `セレクタ::疑似要素名` で作られる
+
+代表的なものとして before と afterがあるのでみていこう。
+
+```
+<template>
+    <div>
+        さんぷる
+    </div>
+<template>
+
+<style>
+div {
+    position: relative;
+}
+
+div::before {
+    content: "▼";
+    position: absolute;
+    left: -16px;
+    top: 0;
+}
+</style>
+```
